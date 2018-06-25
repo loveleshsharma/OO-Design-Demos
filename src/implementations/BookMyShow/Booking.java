@@ -29,23 +29,24 @@ public class Booking {
         System.out.println("Number of Tickets: "+noOfTickets);
     }
 
-
-
     static class SetPreferences {
         private City city;
         private Movie movie;
         private Theater theater;
 
-        public void setCity(Cities city) {
+        public SetPreferences setCity(Cities city) {
             this.city.setCity(city);
+            return this;
         }
 
-        public void setMovie(Movie movie) {
+        public SetPreferences setMovie(Movie movie) {
             this.movie = movie;
+            return this;
         }
 
-        public void setTheater(Theater theater) {
+        public SetPreferences setTheater(Theater theater) {
             this.theater = theater;
+            return this;
         }
 
         public Booking build() {

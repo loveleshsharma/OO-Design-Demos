@@ -10,7 +10,7 @@ public class Movie {
 
 //    private List<String> movies;
 //    private Map<City.Cities,List<String>> movies;
-    private String movieName;
+    private MovieToWatch movieName;
     private Language[] languages;
     private Type[] typesAvailable;
 
@@ -21,7 +21,7 @@ public class Movie {
         this.typesAvailable = builder.typesAvailable;
     }
 
-    public String getMovieName() {
+    public MovieToWatch getMovieName() {
         return movieName;
     }
 
@@ -54,20 +54,22 @@ public class Movie {
 //    }
 
     public static class MovieBuilder {
-        private String movieName;
+        private MovieToWatch movieName;
         private Language[] languages;
         private Type[] typesAvailable;
 
-        MovieBuilder(String movieName) {
+        MovieBuilder(MovieToWatch movieName) {
             this.movieName = movieName;
         }
 
-        public void setLanguages(Language[] languages) {
+        public MovieBuilder setLanguages(Language[] languages) {
             this.languages = languages;
+            return this;
         }
 
-        public void setTypesAvailable(Type[] typesAvailable) {
+        public MovieBuilder setTypesAvailable(Type[] typesAvailable) {
             this.typesAvailable = typesAvailable;
+            return this;
         }
 
         public Movie build() {
@@ -81,7 +83,6 @@ public class Movie {
     }
 
     enum Type {
-        TWOD,THREED,IMAX3D
+        TWOD, THREED, IMAX3D
     }
-
 }
