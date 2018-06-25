@@ -21,8 +21,14 @@ public class City {
 
     private List<Movie> movieList = new ArrayList<Movie>();
 
+    private List<Theater> theaterList = new ArrayList<Theater>();
+
     public void addMovie(Movie movie) {
         movieList.add(movie);
+    }
+
+    public void addTheater(Theater theater) {
+        theaterList.add(theater);
     }
 
 }
