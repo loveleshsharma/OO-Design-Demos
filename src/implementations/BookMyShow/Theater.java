@@ -19,6 +19,10 @@ public class Theater {
         return availableSeats;
     }
 
+    public static void bookSeats(int noOfSeats) {
+        availableSeats -= noOfSeats;
+    }
+
     private void loadShowTimes() {
         showTimes.add(new TimeSlots(7,0,"AM"));
         showTimes.add(new TimeSlots(9,30,"AM"));
@@ -28,6 +32,10 @@ public class Theater {
 
     public List<TimeSlots> getShowTimes() {
         return showTimes;
+    }
+
+    public String getName() {
+        return name;
     }
 
     static class TimeSlots {

@@ -16,8 +16,17 @@ public class Booking {
         if(theater.getShowTimes().contains(timeSlot)) {
             if(Theater.getAvailableSeats() >= noOfTickets) {
 //                book tickets
+                theater.bookSeats(noOfTickets);
+                generateTickets(noOfTickets);
             }
         }
+    }
+
+    private void generateTickets(int noOfTickets) {
+        System.out.println("Booked Successfully!");
+        System.out.println("Movie: "+movie.getMovieName());
+        System.out.println("Theater: "+theater.getName());
+        System.out.println("Number of Tickets: "+noOfTickets);
     }
 
 

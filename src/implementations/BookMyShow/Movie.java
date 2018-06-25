@@ -10,7 +10,6 @@ public class Movie {
 
 //    private List<String> movies;
 //    private Map<City.Cities,List<String>> movies;
-
     private String movieName;
     private Language[] languages;
     private Type[] typesAvailable;
@@ -21,6 +20,11 @@ public class Movie {
         this.languages = builder.languages;
         this.typesAvailable = builder.typesAvailable;
     }
+
+    public String getMovieName() {
+        return movieName;
+    }
+
 
 //    public void loadMovies(City.Cities city) {
 //        switch (city) {
