@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Theater {
 
-    private String name;
+    private Theaters theaterName;
     private List<TimeSlots> showTimes = new ArrayList<>();
     private static int availableSeats = 50;
     private Movie showingMovie;
 
-    public Theater(String name,Movie movie) {
-        this.name = name;
+    public Theater(Theaters name,Movie movie) {
+        this.theaterName = name;
         this.showingMovie = movie;
     }
 
@@ -34,8 +34,8 @@ public class Theater {
         return showTimes;
     }
 
-    public String getName() {
-        return name;
+    public Theaters getName() {
+        return theaterName;
     }
 
     static class TimeSlots {
