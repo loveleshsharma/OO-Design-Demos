@@ -13,6 +13,7 @@ public class Theater {
     public Theater(Theaters name,Movie movie) {
         this.theaterName = name;
         this.showingMovie = movie;
+        loadShowTimes();
     }
 
     public static int getAvailableSeats() {

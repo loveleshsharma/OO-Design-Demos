@@ -35,7 +35,7 @@ public class Booking {
         private Theater theater;
 
         public SetPreferences setCity(Cities city) {
-            this.city.setCity(city);
+            this.city = new City(city);
             return this;
         }
 

@@ -8,7 +8,7 @@ public class BookMyShow {
                 .setLanguages(Movie.Language.values()).setTypesAvailable(Movie.Type.values()));
         Theater theater = new Theater(Theaters.LUXE,movie);
         Booking booking = new Booking(new Booking.SetPreferences().setCity(Cities.MUMBAI).setMovie(movie).setTheater(theater));
-//        booking.bookTicket(2,Theater.TimeSlots);
+        booking.bookTicket(2,theater.getShowTimes().get(1));
     }
 
 }
