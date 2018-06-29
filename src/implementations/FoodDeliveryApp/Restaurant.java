@@ -1,4 +1,4 @@
-package Implementations.FoodDeliveryApp;
+package implementations.FoodDeliveryApp;
 
 public class Restaurant {
 //    Cities
