@@ -8,6 +8,14 @@ public class FoodItem {
     private FoodCategory category;
     private boolean isVeg;
 
+    public FoodItem(FoodBuilder builder) {
+        this.name = builder.name;
+        this.price = builder.price;
+        this.cuisine = builder.cuisine;
+        this.category = builder.category;
+        this.isVeg = builder.isVeg;
+    }
+
     public String getName() {
         return name;
     }
@@ -46,5 +54,45 @@ public class FoodItem {
 
     public void setVeg(boolean veg) {
         isVeg = veg;
+    }
+
+    static class FoodBuilder {
+
+        private String name;
+        private float price;
+        private Cuisine cuisine;
+        private FoodCategory category;
+        private boolean isVeg;
+
+        public FoodBuilder() {}
+
+        public FoodBuilder setName(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public FoodBuilder setPrice(float price) {
+            this.price = price;
+            return this;
+        }
+
+        public FoodBuilder setCuisine(Cuisine cuisine) {
+            this.cuisine = cuisine;
+            return this;
+        }
+
+        public FoodBuilder setCategory(FoodCategory category) {
+            this.category = category;
+            return this;
+        }
+
+        public FoodBuilder setIsVeg(boolean isVeg) {
+            this.isVeg = isVeg;
+            return this;
+        }
+
+        public FoodItem build() {
+            return new FoodItem(this);
+        }
     }
 }
